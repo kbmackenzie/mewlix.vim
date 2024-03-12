@@ -1,1 +1,1 @@
-Vim syntax highlighting for the cat-oriented language [mewlix](https://github.com/KBMackenzie/mewlix).
+[mewlix](https://github.com/KBMackenzie/mewlix) syntax highlighting script for Vim.
