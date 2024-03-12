@@ -11,7 +11,7 @@ syntax case match
 " Identifiers
 " -------------------------------------------------
 syntax match    mewlixIdentifier    /[a-z_][a-zA-Z0-9_]*/
-syntax match    mewlixType          /[A-Z_][a-zA-Z0-9_]*/
+syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
 
 " Constants
 " -------------------------------------------------
