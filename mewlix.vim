@@ -36,10 +36,6 @@ syntax match mewlixOperator /\%(^\|\s\)peek\%(\s*if\)\@\!\%(\s\|$\)/
 syntax match mewlixOperator /\%(^\|\s\)or\%(\s*if\)\@\!\%(\s\|$\)/
 syntax match mewlixOperator /[+-/^.=<>?%!]/
 syntax match mewlixOperator /\*/ " This character was giving me some issues. c':
-syntax match mewlixOperator /\\\n/
-
-syntax match mewlixBrackets /[\[\]]/
-syntax match mewlixParens   /[()]/
 
 " Symbols:
 syntax match mewlixFunction /=\^\.[xX]\.\^=/
@@ -49,6 +45,12 @@ syntax match mewlixLambda /=\^\*[xX]\*\^=/
 " Comments:
 syntax match mewlixLineComment /--.*$/
 syntax region mewlixBlockComment start=/\~( \^\.[xX]\.\^)>/ end=/<(\^\.[xX]\.\^ )\~/
+
+" Extra:
+syntax match mewlixBrackets /[\[\]]/
+syntax match mewlixParens   /[()]/
+
+syntax match mewlixEscapeNewline /\\\n/
 
 " Adding highlighting:
 " --------------------------------
@@ -70,3 +72,4 @@ hi def link mewlixBrackets      Statement
 hi def link mewlixParens        Statement
 hi def link mewlixLineComment   Comment
 hi def link mewlixBlockComment  Comment
+hi def link mewlixEscapeNewline SpecialComment
