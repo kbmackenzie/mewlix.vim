@@ -41,7 +41,7 @@ syntax match mewlixOperator /\*/ " This character was giving me some issues. c':
 syntax match mewlixOperator /\\\n/
 
 " Symbols:
-syntax match mewlixFunc /=\^\.[xX]\.\^=/
+syntax match mewlixFunction /=\^\.[xX]\.\^=/
 syntax match mewlixBox /=\^-[xX]-\^=/
 syntax match mewlixLambda /=\^\*[xX]\*\^=/
 
@@ -62,7 +62,7 @@ hi def link mewlixConstants     Constant
 hi def link mewlixEscape        SpecialChar
 hi def link mewlixOperator      Operator
 hi def link mewlixStatement     Statement
-hi def link mewlixFunc          Statement
+hi def link mewlixFunction      Statement
 hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
 hi def link mewlixLineComment   Comment
