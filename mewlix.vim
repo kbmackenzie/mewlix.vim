@@ -8,6 +8,10 @@ endif
 
 syntax case match
 
+" Identifiers
+syntax match mewlixIdentifier /[a-z_][a-zA-Z0-9_]*/
+syntax match mewlixType /[A-Z_][a-zA-Z0-9_]*/
+
 " Constants
 syntax match mewlixInt /\d\+/
 syntax match mewlixFloat /\d\+\.\d\+/
@@ -56,6 +60,8 @@ syntax match mewlixEscapeNewline /\\\n/
 " --------------------------------
 let b:current_syntax = "mewlix"
 
+"hi def link mewlixIdentifier    Identifier
+hi def link mewlixType          Type
 hi def link mewlixInt           Number
 hi def link mewlixFloat         Float
 hi def link mewlixString        String
