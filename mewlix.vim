@@ -10,7 +10,7 @@ syntax case match
 
 " Identifiers
 " -------------------------------------------------
-syntax match    mewlixIdentifier    /[a-z_][a-zA-Z0-9_]*/
+"syntax match    mewlixIdentifier    /[a-z_][a-zA-Z0-9_]*/
 syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
 
 " Constants
@@ -57,6 +57,7 @@ syntax match    mewlixStatement     /\%(^\|\s\)pounce\s*on\%(\s\|$\)/
 syntax match    mewlixFunction      /=\^\.[xX]\.\^=/
 syntax match    mewlixBox           /=\^-[xX]-\^=/
 syntax match    mewlixLambda        /=\^\*[xX]\*\^=/
+syntax match    mewlixLambda        /=>/
 
 " Libraries:
 " -------------------------------------------------
