@@ -35,9 +35,11 @@ syntax match mewlixOperator /\%(^\|\s\)knock over\%(\s\|$\)/
 syntax match mewlixOperator /\%(^\|\s\)peek\%(\s*if\)\@\!\%(\s\|$\)/
 syntax match mewlixOperator /\%(^\|\s\)or\%(\s*if\)\@\!\%(\s\|$\)/
 syntax match mewlixOperator /[+-/^.=<>?%!]/
-syntax match mewlixOperator /[\[\]()]/
 syntax match mewlixOperator /\*/ " This character was giving me some issues. c':
 syntax match mewlixOperator /\\\n/
+
+syntax match mewlixBrackets /[\[\]]/
+syntax match mewlixParens   /[()]/
 
 " Symbols:
 syntax match mewlixFunction /=\^\.[xX]\.\^=/
@@ -64,5 +66,7 @@ hi def link mewlixStatement     Statement
 hi def link mewlixFunction      Statement
 hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
+hi def link mewlixBrackets      Statement
+hi def link mewlixParens        Statement
 hi def link mewlixLineComment   Comment
 hi def link mewlixBlockComment  Comment
