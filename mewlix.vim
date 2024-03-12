@@ -9,6 +9,12 @@ endif
 syntax case match
 
 " Constants
+syntax match mewlixInt /\d\+/
+syntax match mewlixFloat /\d\+\.\d\+/
+syntax match mewlixFloat /\d\+\%(\.\d\+\)\?e\d\+/
+syntax match mewlixEscape /\\[a-z\/\\"]/
+syntax region mewlixString start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscape
+syntax region mewlixStringLn start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscape
 syntax keyword mewlixBoolean true false
 syntax keyword mewlixConstants nothing home super
 
@@ -22,13 +28,6 @@ syntax match mewlixStatement /\%(^\|\s\)catch\s*a\%(\s\|$\)/
 syntax match mewlixStatement /\%(^\|\s\)yarn\s*ball\%(\s\|$\)/
 syntax match mewlixStatement /\%(^\|\s\)pounce\s*on\%(\s\|$\)/
 syntax match mewlixStatement /\%(^\|\s\)watch\s*attentively\%(\s\|$\)/
-
-" Literals
-syntax match mewlixInt /\d\+/
-syntax match mewlixFloat /\d\+\.\d\+/
-syntax match mewlixEscape /\\[a-z\/\\"]/
-syntax region mewlixString start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscape
-syntax region mewlixStringLn start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscape
 
 " Operators
 syntax keyword mewlixOperator and not push paw claw at is new
