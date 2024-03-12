@@ -22,7 +22,7 @@ syntax match    mewlixEscape        /\\[a-z\/\\"]/
 syntax region   mewlixString        start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscape
 syntax region   mewlixStringLn      start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscape
 syntax keyword  mewlixBoolean       true false
-syntax keyword  mewlixConstants     nothing home super outside
+syntax keyword  mewlixNil           nothing
 
 " Operators
 " -------------------------------------------------
@@ -39,6 +39,7 @@ syntax match    mewlixOperator      /\*/ " This character was giving me some iss
 syntax keyword  mewlixDeclare       mew
 syntax keyword  mewlixClowder       clowder
 syntax keyword  mewlixStatement     meow meowmeow wake listen catnap assert throw escape
+syntax keyword  mewlixHome          home outside
 syntax match    mewlixConditional   /\%(^\|\s\)peek\s*if\%(\s\|$\)/
 syntax match    mewlixConditional   /\%(^\|\s\)or\s*if\%(\s\|$\)/
 syntax keyword  mewlixConditional   otherwise
@@ -87,13 +88,14 @@ hi def link mewlixFloat         Float
 hi def link mewlixString        String
 hi def link mewlixStringLn      String
 hi def link mewlixBoolean       Boolean
-hi def link mewlixConstants     Constant
+hi def link mewlixNil           Constant
 hi def link mewlixEscape        SpecialChar
 hi def link mewlixOperator      Operator
 
 hi def link mewlixDeclare       Statement
 hi def link mewlixClowder       Statement
 hi def link mewlixStatement     Statement
+hi def link mewlixHome          Identifier
 hi def link mewlixConditional   Conditional
 hi def link mewlixRepeat        Repeat
 hi def link mewlixYarnball      Statement
@@ -103,7 +105,7 @@ hi def link mewlixFunction      Statement
 hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
 
-hi def link mewlixStd           Constant
+hi def link mewlixStd           Identifier
 
 hi def link mewlixBrackets      Statement " Choosing 'Statement' for aesthetic purposes, really!
 hi def link mewlixParens        Statement 
