@@ -22,6 +22,14 @@ syntax region mewlixStringLn start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEsc
 syntax keyword mewlixBoolean true false
 syntax keyword mewlixConstants nothing home super
 
+" Operators
+syntax keyword mewlixOperator and not push paw claw at is new
+syntax match mewlixOperator /\%(^\|\s\)knock over\%(\s\|$\)/
+syntax match mewlixOperator /\%(^\|\s\)peek\%(\s\|$\)/
+syntax match mewlixOperator /\%(^\|\s\)or\%(\s*if\)\@\!\%(\s\|$\)/
+syntax match mewlixOperator /[+-/^.=<>?%!]/
+syntax match mewlixOperator /\*/ " This character was giving me some issues. c':
+
 " Statement Keywords
 syntax keyword mewlixStatement meow mew meowmeow clowder home outside wake listen otherwise takes as yarnball catnap assert throw escape
 syntax match mewlixStatement /\%(^\|\s\)peek\s*if\%(\s\|$\)/
@@ -32,14 +40,6 @@ syntax match mewlixStatement /\%(^\|\s\)catch\s*a\%(\s\|$\)/
 syntax match mewlixStatement /\%(^\|\s\)yarn\s*ball\%(\s\|$\)/
 syntax match mewlixStatement /\%(^\|\s\)pounce\s*on\%(\s\|$\)/
 syntax match mewlixStatement /\%(^\|\s\)watch\s*attentively\%(\s\|$\)/
-
-" Operators
-syntax keyword mewlixOperator and not push paw claw at is new
-syntax match mewlixOperator /\%(^\|\s\)knock over\%(\s\|$\)/
-syntax match mewlixOperator /\%(^\|\s\)peek\%(\s*if\)\@\!\%(\s\|$\)/
-syntax match mewlixOperator /\%(^\|\s\)or\%(\s*if\)\@\!\%(\s\|$\)/
-syntax match mewlixOperator /[+-/^.=<>?%!]/
-syntax match mewlixOperator /\*/ " This character was giving me some issues. c':
 
 " Symbols:
 syntax match mewlixFunction /=\^\.[xX]\.\^=/
