@@ -1,7 +1,7 @@
 A [mewlix](https://github.com/KBMackenzie/mewlix) syntax highlighting script for Vim.
 
 ## Installation
-After copying the `mewlix.vim` script to the [Vim syntax folder](https://vi.stackexchange.com/a/10815), add one of of the following snippets to your configuration:
+After copying the `mewlix.vim` script to the [Vim syntax folder](https://vimdoc.sourceforge.net/htmldoc/syntax.html#mysyntaxfile), add one of of the following snippets to your configuration:
 
 ### Vimscript
 Paste this Vimscript snippet in your `.vimrc`:
