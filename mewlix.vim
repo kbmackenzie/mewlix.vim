@@ -59,24 +59,26 @@ syntax match    mewlixBox           /=\^-[xX]-\^=/
 syntax match    mewlixLambda        /=\^\*[xX]\*\^=/
 syntax match    mewlixLambda        /=>/
 
+" Additional Symbols:
+" -------------------------------------------------
+syntax match    mewlixBrackets      /[\[\]]/
+syntax match    mewlixParens        /[()]/
+syntax match    mewlixDot           /\./
+
+" Newline Escape:
+" -------------------------------------------------
+syntax match    mewlixEscapeLine    /\\\n/
+
 " Libraries:
 " -------------------------------------------------
 syntax keyword  mewlixStd           std console graphic
 
 " Comments:
 " -------------------------------------------------
-syntax match    mewlixLineComment   /--.*$/
-syntax region   mewlixBlockComment  start=/\~( \^\.[xX]\.\^)>/ end=/<(\^\.[xX]\.\^ )\~/
-
-" Extra:
-" -------------------------------------------------
-syntax match    mewlixBrackets      /[\[\]]/
-syntax match    mewlixParens        /[()]/
-syntax match    mewlixDot           /\./
-
-" Escape:
-" -------------------------------------------------
-syntax match    mewlixEscapeLine    /\\\n/
+syntax case ignore
+syntax keyword  mewlixTodo          contained TODO FIXME XXX
+syntax match    mewlixLineComment   /--.*$/ contains=@Spell,mewlixTodo
+syntax region   mewlixBlockComment  start=/\~( \^\.[xX]\.\^)>/ end=/<(\^\.[xX]\.\^ )\~/ contains=@Spell,mewlixTodo
 
 " Adding highlighting:
 " --------------------------------
@@ -114,5 +116,6 @@ hi def link mewlixDot           Statement
 
 hi def link mewlixEscapeLine    SpecialComment
 
+hi def link mewlixTodo          Todo
 hi def link mewlixLineComment   Comment
 hi def link mewlixBlockComment  Comment
