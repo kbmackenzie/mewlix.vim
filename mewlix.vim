@@ -46,7 +46,7 @@ syntax keyword  mewlixConditional   otherwise
 syntax match    mewlixRepeat        /\%(^\|\s\)stare\s*while\%(\s\|$\)/
 syntax match    mewlixRepeat        /\%(^\|\s\)it\'s\s*raining\%(\s\|$\)/
 syntax match    mewlixRepeat        /\%(^\|\s\)catch\s*a\%(\s\|$\)/
-syntax keyword  mewlixImport        takes as
+syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
 syntax match    mewlixYarnball      /\%(^\|\s\)yarn\s*ball\%(\s\|$\)/
 syntax match    mewlixStatement     /\%(^\|\s\)watch\s*attentively\%(\s\|$\)/
