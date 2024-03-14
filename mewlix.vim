@@ -29,7 +29,7 @@ syntax keyword  mewlixNil           nothing
 syntax keyword  mewlixOperator      and not push paw claw at is new
 syntax match    mewlixOperator      /\%(^\|\s\)knock over\%(\s\|$\)/
 syntax match    mewlixOperator      /\%(^\|\s\)peek\%(\s\|$\)/
-syntax match    mewlixOperator      /\%(^\|\s\)or\%(\s*if\)\@\!\%(\s\|$\)/
+syntax match    mewlixOperator      /\%(^\|\s\)or\%(\s\|$\)/
 syntax match    mewlixOperator      /[+-/^=<>?%!]/
 syntax match    mewlixOperator      /\.\./
 syntax match    mewlixOperator      /\*/ " This character was giving me some issues. c':
