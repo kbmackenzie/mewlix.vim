@@ -56,7 +56,7 @@ syntax match    mewlixStatement     /\%(^\|\s\)pounce\s*on\%(\s\|$\)/
 " -------------------------------------------------
 syntax match    mewlixFunction      /=\^\.[xX]\.\^=/
 syntax match    mewlixBox           /=\^-[xX]-\^=/
-syntax match    mewlixLambda        /=\^\*[xX]\*\^=/
+syntax match    mewlixLambda        /=\^[oO][xX][oO]^=/
 syntax match    mewlixLambda        /=>/
 
 " Additional Symbols:
