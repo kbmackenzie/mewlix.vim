@@ -21,6 +21,7 @@ syntax match    mewlixFloat         /\d\+\%(\.\d\+\)\?e\d\+/
 syntax match    mewlixEscape        /\\[a-z\/\\"]/
 syntax region   mewlixString        start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscape
 syntax region   mewlixStringLn      start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscape
+syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewlixEscape
 syntax keyword  mewlixBoolean       true false
 syntax keyword  mewlixNil           nothing
 
@@ -90,6 +91,7 @@ hi def link mewlixInt           Number
 hi def link mewlixFloat         Float
 hi def link mewlixString        String
 hi def link mewlixStringLn      String
+hi def link mewlixYarnString    String
 hi def link mewlixBoolean       Boolean
 hi def link mewlixNil           Constant
 hi def link mewlixEscape        SpecialChar
