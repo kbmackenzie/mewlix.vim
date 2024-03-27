@@ -18,7 +18,7 @@ syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
 syntax match    mewlixInt           /\d\+/
 syntax match    mewlixFloat         /\d\+\.\d\+/
 syntax match    mewlixFloat         /\d\+\%(\.\d\+\)\?e\d\+/
-syntax match    mewlixEscape        /\\[a-z\/\\"]/
+syntax match    mewlixEscape        contained /\\[a-z\/\\"]/
 syntax region   mewlixString        start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscape
 syntax region   mewlixStringLn      start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscape
 syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewlixEscape
