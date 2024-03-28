@@ -40,7 +40,8 @@ syntax match    mewlixOperator      /\*/ " This character was giving me some iss
 syntax keyword  mewlixDeclare       mew
 syntax keyword  mewlixClowder       clowder
 syntax keyword  mewlixStatement     meow meowmeow wake listen catnap bring assert throw escape
-syntax keyword  mewlixHome          home outside
+syntax keyword  mewlixHome          home
+syntax match    mewlixOutside       /\%(^\|\s\)look\s*outside\%(\s\|$\)/
 syntax match    mewlixConditional   /\%(^\|\s\)peek\s*if\%(\s\|$\)/
 syntax match    mewlixConditional   /\%(^\|\s\)or\s*if\%(\s\|$\)/
 syntax keyword  mewlixConditional   otherwise
@@ -101,6 +102,7 @@ hi def link mewlixDeclare       Statement
 hi def link mewlixClowder       Statement
 hi def link mewlixStatement     Statement
 hi def link mewlixHome          Identifier
+hi def link mewlixOutside       Identifier
 hi def link mewlixConditional   Conditional
 hi def link mewlixRepeat        Repeat
 hi def link mewlixYarnball      Statement
