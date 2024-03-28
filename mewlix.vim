@@ -28,9 +28,9 @@ syntax keyword  mewlixNil           nothing
 " Operators
 " -------------------------------------------------
 syntax keyword  mewlixOperator      and not push paw claw at is new
-syntax match    mewlixOperator      /\%(^\|[^a-zA-Z_]\)knock over\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixOperator      /\%(^\|[^a-zA-Z_]\)peek\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixOperator      /\%(^\|[^a-zA-Z_]\)or\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixOperator      /\%(^\|[^a-zA-Z_]\)\zsknock over\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixOperator      /\%(^\|[^a-zA-Z_]\)\zspeek\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixOperator      /\%(^\|[^a-zA-Z_]\)\zsor\ze\%([^a-zA-Z_]\|$\)/
 syntax match    mewlixOperator      /[+-/^=<>?%!]/
 syntax match    mewlixOperator      /\.\./
 syntax match    mewlixOperator      /\*/ " This character was giving me some issues. c':
@@ -41,18 +41,18 @@ syntax keyword  mewlixDeclare       mew
 syntax keyword  mewlixClowder       clowder
 syntax keyword  mewlixStatement     meow meowmeow wake listen catnap bring assert throw escape
 syntax keyword  mewlixHome          home
-syntax match    mewlixOutside       /\%(^\|[^a-zA-Z_]\)look\s*outside\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixConditional   /\%(^\|[^a-zA-Z_]\)peek\s*if\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixConditional   /\%(^\|[^a-zA-Z_]\)or\s*if\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixOutside       /\%(^\|[^a-zA-Z_]\)\zslook\s*outside\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixConditional   /\%(^\|[^a-zA-Z_]\)\zspeek\s*if\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixConditional   /\%(^\|[^a-zA-Z_]\)\zsor\s*if\%([^a-zA-Z_]\|$\)/
 syntax keyword  mewlixConditional   otherwise
-syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z_]\)stare\s*while\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z_]\)it\'s\s*raining\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z_]\)catch\s*a\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z_]\)\zsstare\s*while\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z_]\)\zsit\'s\s*raining\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z_]\)\zscatch\s*a\ze\%([^a-zA-Z_]\|$\)/
 syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
-syntax match    mewlixYarnball      /\%(^\|[^a-zA-Z_]\)yarn\s*ball\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixStatement     /\%(^\|[^a-zA-Z_]\)watch\s*attentively\%([^a-zA-Z_]\|$\)/
-syntax match    mewlixStatement     /\%(^\|[^a-zA-Z_]\)pounce\s*on\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixYarnball      /\%(^\|[^a-zA-Z_]\)\zsyarn\s*ball\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixStatement     /\%(^\|[^a-zA-Z_]\)\zswatch\s*attentively\ze\%([^a-zA-Z_]\|$\)/
+syntax match    mewlixStatement     /\%(^\|[^a-zA-Z_]\)\zspounce\s*on\ze\%([^a-zA-Z_]\|$\)/
 
 " Symbols:
 " -------------------------------------------------
