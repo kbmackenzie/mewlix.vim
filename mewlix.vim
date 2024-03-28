@@ -10,7 +10,6 @@ syntax case match
 
 " Identifiers
 " -------------------------------------------------
-"syntax match    mewlixIdentifier    /[a-z_][a-zA-Z0-9_]*/
 syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
 
 " Constants
@@ -86,7 +85,6 @@ syntax region   mewlixBlockComment  start=/\~( \^\.[xX]\.\^)>/ end=/<(\^\.[xX]\.
 " --------------------------------
 let b:current_syntax = "mewlix"
 
-"hi def link mewlixIdentifier    Identifier
 hi def link mewlixType          Type
 hi def link mewlixInt           Number
 hi def link mewlixFloat         Float
