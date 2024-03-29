@@ -26,7 +26,7 @@ syntax keyword  mewlixNil           nothing
 
 " Operators
 " -------------------------------------------------
-syntax keyword  mewlixOperator      and not push paw claw at is new nand nor
+syntax keyword  mewlixOperator      and not push paw claw at is new nand nor if else
 syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zsknock over\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zspeek\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zsor\ze\%([^a-zA-Z0-9_]\|$\)/
