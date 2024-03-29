@@ -32,6 +32,7 @@ syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zspeek\ze\%([^a-zA-Z0
 syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zsor\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax match    mewlixOperator      /[+-/^=<>?%!]/
 syntax match    mewlixOperator      /:>/
+syntax match    mewlixOperator      /|>/
 syntax match    mewlixOperator      /\.\./
 syntax match    mewlixOperator      /\*/ " This character was giving me some issues. c':
 
