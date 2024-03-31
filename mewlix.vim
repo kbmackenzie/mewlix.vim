@@ -25,10 +25,9 @@ syntax keyword  mewlixNil           nothing
 " Strings:
 " -------------------------------------------------
 syntax match    mewlixEscapeChar    contained /\\[a-z\/\\"]/
-syntax match    mewlixStrError      contained /\n[^"]*/
-syntax region   mewlixString        start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscapeChar,mewlixStrError
+syntax region   mewlixString        start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscapeChar
 syntax region   mewlixStringLn      start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscapeChar
-syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewlixEscapeChar,mewlixStrError
+syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewlixEscapeChar
 
 " Operators:
 " -------------------------------------------------
@@ -102,7 +101,6 @@ hi def link mewlixNil           Constant
 
 " Strings:
 hi def link mewlixEscapeChar    SpecialChar
-hi def link mewlixStrError      Error
 hi def link mewlixString        String
 hi def link mewlixStringLn      String
 hi def link mewlixYarnString    String
