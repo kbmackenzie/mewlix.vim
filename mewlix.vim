@@ -109,7 +109,7 @@ hi def link mewlixFuncDef       Statement
 hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
 
-hi def link mewlixStd           Identifier
+hi def link mewlixStd           Constant
 
 hi def link mewlixEscapeLine    SpecialComment
 
