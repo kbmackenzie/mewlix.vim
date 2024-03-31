@@ -62,12 +62,6 @@ syntax match    mewlixBox           /=\^-[xX]-\^=/
 syntax match    mewlixLambda        /=\^[oO][xX][oO]^=/
 syntax match    mewlixLambda        /=>/
 
-" Additional Symbols:
-" -------------------------------------------------
-syntax match    mewlixBrackets      /[\[\]]/
-syntax match    mewlixParens        /[()]/
-syntax match    mewlixDot           /\./
-
 " Newline Escape:
 " -------------------------------------------------
 syntax match    mewlixEscapeLine    /\\\n/
@@ -113,10 +107,6 @@ hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
 
 hi def link mewlixStd           Identifier
-
-hi def link mewlixBrackets      Statement " Choosing 'Statement' for aesthetic purposes, really!
-hi def link mewlixParens        Statement 
-hi def link mewlixDot           Statement
 
 hi def link mewlixEscapeLine    SpecialComment
 
