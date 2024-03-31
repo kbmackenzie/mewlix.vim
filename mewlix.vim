@@ -45,7 +45,7 @@ syntax keyword  mewlixStatement     meow meowmeow wake listen catnap bring asser
 syntax keyword  mewlixHome          home
 syntax match    mewlixOutside       /\%(^\|[^a-zA-Z0-9_]\)\zslook\s*outside\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax match    mewlixConditional   /\%(^\|[^a-zA-Z0-9_]\)\zspeek\s*if\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixConditional   /\%(^\|[^a-zA-Z0-9_]\)\zsor\s*if\%([^a-zA-Z0-9_]\|$\)/
+syntax match    mewlixConditional   /\%(^\|[^a-zA-Z0-9_]\)\zsor\s*if\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax keyword  mewlixConditional   otherwise
 syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z0-9_]\)\zsstare\s*while\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z0-9_]\)\zsit\'s\s*raining\ze\%([^a-zA-Z0-9_]\|$\)/
