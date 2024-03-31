@@ -71,7 +71,7 @@ syntax match    mewlixLambda        /=>/
 
 " Newline escape:
 " -------------------------------------------------
-syntax match    mewlixEscapeLine    /\\\n/
+syntax match    mewlixEscapeLine    /\\$/
 
 " Standard library:
 " -------------------------------------------------
@@ -130,7 +130,7 @@ hi def link mewlixLambda        Statement
 hi def link mewlixStd           Constant
 
 " Newline escape:
-hi def link mewlixEscapeLine    SpecialComment
+hi def link mewlixEscapeLine    Special
 
 " Special comments:
 hi def link mewlixTodo          Todo
