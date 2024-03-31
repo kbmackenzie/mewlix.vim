@@ -8,12 +8,12 @@ endif
 
 syntax case match
 
-" Identifiers
+" Identifiers:
 " -------------------------------------------------
 syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
 syntax match    mewlixFunction      /[a-z_][a-zA-Z0-9_]*\ze\s*(/
 
-" Constants
+" Literals:
 " -------------------------------------------------
 syntax match    mewlixInt           /\d\+/
 syntax match    mewlixFloat         /\d\+\.\d\+/
@@ -25,7 +25,7 @@ syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewl
 syntax keyword  mewlixBoolean       true false
 syntax keyword  mewlixNil           nothing
 
-" Operators
+" Operators:
 " -------------------------------------------------
 syntax keyword  mewlixOperator      and not push paw claw at is new nand nor if else in
 syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zsknock over\ze\%([^a-zA-Z0-9_]\|$\)/
@@ -37,7 +37,7 @@ syntax match    mewlixOperator      /|>/
 syntax match    mewlixOperator      /\.\./
 syntax match    mewlixOperator      /\*/ " This character was giving me some issues. c':
 
-" Statement Statements
+" Statements:
 " -------------------------------------------------
 syntax keyword  mewlixDeclare       mew
 syntax keyword  mewlixClowder       clowder
