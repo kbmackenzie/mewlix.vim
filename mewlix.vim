@@ -11,6 +11,7 @@ syntax case match
 " Identifiers
 " -------------------------------------------------
 syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
+syntax match    mewlixFunction      /[a-z_][a-zA-Z0-9_]*\ze\s*(/
 
 " Constants
 " -------------------------------------------------
@@ -57,7 +58,7 @@ syntax match    mewlixStatement     /\%(^\|[^a-zA-Z0-9_]\)\zspounce\s*on\ze\%([^
 
 " Symbols:
 " -------------------------------------------------
-syntax match    mewlixFunction      /=\^\.[xX]\.\^=/
+syntax match    mewlixFuncDef       /=\^\.[xX]\.\^=/
 syntax match    mewlixBox           /=\^-[xX]-\^=/
 syntax match    mewlixLambda        /=\^[oO][xX][oO]^=/
 syntax match    mewlixLambda        /=>/
@@ -82,6 +83,8 @@ syntax region   mewlixBlockComment  start=/\~( \^\.[xX]\.\^)>/ end=/<(\^\.[xX]\.
 let b:current_syntax = "mewlix"
 
 hi def link mewlixType          Type
+hi def link mewlixFunction      Function
+
 hi def link mewlixInt           Number
 hi def link mewlixFloat         Float
 hi def link mewlixString        String
@@ -102,7 +105,7 @@ hi def link mewlixRepeat        Repeat
 hi def link mewlixYarnball      Statement
 hi def link mewlixImport        Include
 
-hi def link mewlixFunction      Statement
+hi def link mewlixFuncDef       Statement
 hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
 
