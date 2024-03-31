@@ -36,6 +36,7 @@ syntax match    mewlixOperator      /[+\-/^=<>%]/
 syntax match    mewlixOperator      /:>/
 syntax match    mewlixOperator      /|>/
 syntax match    mewlixOperator      /\.\./
+syntax match    mewlixOperator      /\.\.\.?/
 syntax match    mewlixOperator      /\*/ " This character was giving me some issues. c':
 
 " Statements:
