@@ -125,7 +125,7 @@ hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
 
 " Standard library:
-hi def link mewlixStd           Constant
+hi def link mewlixStd           Identifier
 
 " Newline escape:
 hi def link mewlixEscapeLine    Special
