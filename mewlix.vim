@@ -74,7 +74,7 @@ syntax match    mewlixEscapeLine    /\\$/
 
 " Standard library:
 " -------------------------------------------------
-syntax keyword  mewlixStd           std console graphic
+syntax keyword  mewlixStd           std console graphic curry
 
 " Comments:
 " -------------------------------------------------
