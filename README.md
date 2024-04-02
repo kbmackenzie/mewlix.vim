@@ -1,4 +1,4 @@
-A [mewlix](https://github.com/KBMackenzie/mewlix) syntax highlighting script for Vim.
+A [mewlix](https://github.com/kbmackenzie/mewlix) syntax highlighting script for Vim.
 
 ## Installation
 After copying the `mewlix.vim` script to the [Vim syntax folder](https://vimdoc.sourceforge.net/htmldoc/syntax.html#mysyntaxfile), add one of of the following snippets to your configuration:

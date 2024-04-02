@@ -1,6 +1,6 @@
 " Mewlix syntax file.
 " Language: Mewlix 
-" Maintainer: KBMackenzie <kelly.a.betty@gmail.com>
+" Maintainer: kbmackenzie <kelly.a.betty@gmail.com>
 
 if exists("b:current_syntax")
     finish
