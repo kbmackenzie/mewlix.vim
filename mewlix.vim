@@ -24,7 +24,7 @@ syntax keyword  mewlixNil           nothing
 
 " Strings:
 " -------------------------------------------------
-syntax match    mewlixEscapeChar    contained /\\[a-z\/\\"]/
+syntax match    mewlixEscapeChar    contained /\\./
 syntax region   mewlixString        start=/"/ skip=/\\"/ end=/"/ contains=mewlixEscapeChar
 syntax region   mewlixStringLn      start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscapeChar
 syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewlixEscapeChar
