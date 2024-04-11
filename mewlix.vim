@@ -17,10 +17,8 @@ function! s:wordSequence(words)
 endfunction
 
 function! s:highlightWords(group, words)
-    echo s:wordSequence(a:words)
     let l:syntaxCmd = 'syntax match ' .. a:group .. ' ' .. s:wordSequence(a:words)
     execute l:syntaxCmd
-    echo 'Ran command successfully: ' .. a:group
 endfunction
 
 syntax case match
