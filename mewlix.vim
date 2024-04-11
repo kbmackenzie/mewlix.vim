@@ -9,14 +9,15 @@ endif
 " Helper functions:
 " -------------------------------------------------
 function! s:wordSequence(words)
-    let l:output = '/\%(^\|[^a-zA-Z0-9_]\)\zs'
-    for word in a:words
-        let l:output = l:output .. word .. '\s*'
+    let l:output = '/\%(^\|[^a-zA-Z0-9_]\)\zs' .. a:words[0]
+    for word in a:words[1:]
+        let l:output = l:output .. '\s*' .. word
     endfor
     return l:output .. '\ze\%([^a-zA-Z0-9_]\|$\)/'
 endfunction
 
 function! s:highlightWords(group, words)
+    echo s:wordSequence(a:words)
     let l:syntaxCmd = 'syntax match ' .. a:group .. ' ' .. s:wordSequence(a:words)
     execute l:syntaxCmd
     echo 'Ran command successfully: ' .. a:group
