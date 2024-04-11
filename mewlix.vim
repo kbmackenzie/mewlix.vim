@@ -6,6 +6,22 @@ if exists("b:current_syntax")
     finish
 endif
 
+" Helper functions:
+" -------------------------------------------------
+function! s:wordSequence(words)
+    let l:output = '/\%(^\|[^a-zA-Z0-9_]\)\zs'
+    for word in a:words
+        let l:output = l:output .. word .. '\s*'
+    endfor
+    return l:output .. '\ze\%([^a-zA-Z0-9_]\|$\)/'
+endfunction
+
+function! s:highlightWords(group, words)
+    let l:syntaxCmd = 'syntax match ' .. a:group .. ' ' .. s:wordSequence(a:words)
+    execute l:syntaxCmd
+    echo 'Ran command successfully: ' .. a:group
+endfunction
+
 syntax case match
 
 " Identifiers:
@@ -32,15 +48,16 @@ syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewl
 " Operators:
 " -------------------------------------------------
 syntax keyword  mewlixOperator      and not push paw claw at is new nand nor if else in
-syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zsknock over\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zspeek\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixOperator      /\%(^\|[^a-zA-Z0-9_]\)\zsor\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax match    mewlixOperator      /[+\-/^=<>%]/
 syntax match    mewlixOperator      /:>/
 syntax match    mewlixOperator      /|>/
 syntax match    mewlixOperator      /\.\./
 syntax match    mewlixOperator      /\.\.\.?/
 syntax match    mewlixOperator      /\*/ " This character was giving me some issues. c':
+
+call s:highlightWords('mewlixOperator', ["knock", "over"])
+call s:highlightWords('mewlixOperator', ["paw", "at"])
+call s:highlightWords('mewlixOperator', ["or"])
 
 " Statements:
 " -------------------------------------------------
