@@ -47,7 +47,7 @@ syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewl
 
 " Operators:
 " -------------------------------------------------
-syntax keyword  mewlixOperator      and not push paw claw at is new nand nor if else in
+syntax keyword  mewlixOperator      and not push is new nand nor if else in
 syntax match    mewlixOperator      /[+\-/^=<>%]/
 syntax match    mewlixOperator      /:>/
 syntax match    mewlixOperator      /|>/
@@ -57,6 +57,7 @@ syntax match    mewlixOperator      /\*/ " This character was giving me some iss
 
 call s:highlightWords('mewlixOperator', ["knock", "over"])
 call s:highlightWords('mewlixOperator', ["paw", "at"])
+call s:highlightWords('mewlixOperator', ["claw", "at"])
 call s:highlightWords('mewlixOperator', ["or"])
 
 " Statements:
@@ -65,19 +66,20 @@ syntax keyword  mewlixDeclare       mew
 syntax keyword  mewlixClowder       clowder
 syntax keyword  mewlixStatement     meow meowmeow wake listen catnap bring assert throw escape
 syntax keyword  mewlixHome          home
-syntax match    mewlixOutside       /\%(^\|[^a-zA-Z0-9_]\)\zslook\s*outside\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixConditional   /\%(^\|[^a-zA-Z0-9_]\)\zspeek\s*if\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixConditional   /\%(^\|[^a-zA-Z0-9_]\)\zsor\s*if\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax keyword  mewlixConditional   otherwise
-syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z0-9_]\)\zsstare\s*while\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z0-9_]\)\zsit\'s\s*raining\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixRepeat        /\%(^\|[^a-zA-Z0-9_]\)\zscatch\s*a\ze\%([^a-zA-Z0-9_]\|$\)/
 syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
-syntax match    mewlixYarnball      /\%(^\|[^a-zA-Z0-9_]\)\zsyarn\s*ball\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixStatement     /\%(^\|[^a-zA-Z0-9_]\)\zswatch\s*attentively\ze\%([^a-zA-Z0-9_]\|$\)/
-syntax match    mewlixStatement     /\%(^\|[^a-zA-Z0-9_]\)\zspounce\s*on\ze\%([^a-zA-Z0-9_]\|$\)/
 
+call s:highlightWords('mewlixOutside', ["look", "outside"])
+call s:highlightWords('mewlixConditional', ["look", "if"])
+call s:highlightWords('mewlixConditional', ["or", "if"])
+call s:highlightWords('mewlixConditional', ["else", "just"])
+call s:highlightWords('mewlixRepeat', ["stare", "while"])
+call s:highlightWords('mewlixRepeat', ["it's", "raining"])
+call s:highlightWords('mewlixRepeat', ["catch", "a"])
+call s:highlightWords('mewlixYarnball', ["yarn", "ball"])
+call s:highlightWords('mewlixTryCatch', ["watch", "attentively"])
+call s:highlightWords('mewlixTryCatch', ["pounce", "on"])
+"
 " Symbols:
 " -------------------------------------------------
 syntax match    mewlixFuncDef       /=\^\.[xX]\.\^=/
@@ -135,6 +137,7 @@ hi def link mewlixConditional   Conditional
 hi def link mewlixRepeat        Repeat
 hi def link mewlixYarnball      Statement
 hi def link mewlixImport        Include
+hi def link mewlixTryCatch      Statement
 
 " Symbols:
 hi def link mewlixFuncDef       Statement
