@@ -48,7 +48,7 @@ syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewl
 
 " Operators:
 " -------------------------------------------------
-syntax keyword  mewlixOperator      and not push is new nand nor if else in
+syntax keyword  mewlixOperator      and not push is new nand nor if in
 syntax match    mewlixOperator      /[+\-/^=<>%]/
 syntax match    mewlixOperator      /:>/
 syntax match    mewlixOperator      /|>/
@@ -60,6 +60,7 @@ call s:highlightWords('mewlixOperator', ["knock", "over"])
 call s:highlightWords('mewlixOperator', ["paw", "at"])
 call s:highlightWords('mewlixOperator', ["claw", "at"])
 call s:highlightWords('mewlixOperator', ["or"])
+call s:highlightWords('mewlixOperator', ["else"])
 
 " Statements:
 " -------------------------------------------------
