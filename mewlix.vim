@@ -61,6 +61,7 @@ call s:highlightWords('mewlixOperator', ["paw", "at"])
 call s:highlightWords('mewlixOperator', ["claw", "at"])
 call s:highlightWords('mewlixOperator', ["or"])
 call s:highlightWords('mewlixOperator', ["else"])
+call s:highlightWords('mewlixOperator', ["look", "closely", "at"])
 
 " Statements:
 " -------------------------------------------------
