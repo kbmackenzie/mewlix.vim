@@ -70,6 +70,7 @@ syntax keyword  mewlixHome          home
 syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
 
+call s:highlightWords('mewlixYarnball', ["run", "away"])
 call s:highlightWords('mewlixOutside', ["look", "outside"])
 call s:highlightWords('mewlixConditional', ["look", "if"])
 call s:highlightWords('mewlixConditional', ["or", "if"])
@@ -80,7 +81,7 @@ call s:highlightWords('mewlixRepeat', ["catch", "a"])
 call s:highlightWords('mewlixYarnball', ["yarn", "ball"])
 call s:highlightWords('mewlixTryCatch', ["watch", "attentively"])
 call s:highlightWords('mewlixTryCatch', ["pounce", "on"])
-"
+
 " Symbols:
 " -------------------------------------------------
 syntax match    mewlixFuncDef       /=\^\.[xX]\.\^=/
