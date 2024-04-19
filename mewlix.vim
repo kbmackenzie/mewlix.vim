@@ -70,7 +70,8 @@ syntax keyword  mewlixHome          home
 syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
 
-call s:highlightWords('mewlixYarnball', ["run", "away"])
+call s:highlightWords('mewlixStatement', ["run", "away"])
+call s:highlightWords('mewlixEnum', ["cat", "tree"])
 call s:highlightWords('mewlixOutside', ["look", "outside"])
 call s:highlightWords('mewlixConditional', ["look", "if"])
 call s:highlightWords('mewlixConditional', ["or", "if"])
@@ -131,6 +132,7 @@ hi def link mewlixOperator      Operator
 
 " Statements:
 hi def link mewlixDeclare       Statement
+hi def link mewlixEnum          Statement
 hi def link mewlixClowder       Statement
 hi def link mewlixStatement     Statement
 hi def link mewlixHome          Identifier
