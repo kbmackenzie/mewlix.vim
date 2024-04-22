@@ -28,6 +28,7 @@ syntax case match
 syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
 syntax match    mewlixFunction      /[a-z_][a-zA-Z0-9_]*\ze\s*(/
 syntax match    mewlixBoxProperty   /[a-z_][a-zA-Z0-9_]*:/
+syntax match    mewlixDoAction      /[a-z_][a-zA-Z0-9_]*\ze\s*=>/
 
 " Literals:
 " -------------------------------------------------
@@ -114,6 +115,7 @@ let b:current_syntax = "mewlix"
 hi def link mewlixType          Type
 hi def link mewlixFunction      Function
 hi def link mewlixBoxProperty   Identifier
+hi def link mewlixDoAction      Function
 
 " Literals:
 hi def link mewlixInt           Number
