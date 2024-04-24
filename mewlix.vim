@@ -28,7 +28,7 @@ syntax case match
 syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
 syntax match    mewlixFunction      /[a-z_][a-zA-Z0-9_]*\ze\s*(/
 syntax match    mewlixBoxProperty   /[a-z_][a-zA-Z0-9_]*:/
-syntax match    mewlixDoAction      /[a-z_][a-zA-Z0-9_]*\ze\s*=>/
+syntax match    mewlixDoAction      /[a-z_][a-zA-Z0-9_]*\ze\s*->/
 
 " Literals:
 " -------------------------------------------------
@@ -89,7 +89,8 @@ call s:highlightWords('mewlixTryCatch', ["pounce", "on"])
 syntax match    mewlixFuncDef       /=\^\.[xX]\.\^=/
 syntax match    mewlixBox           /=\^-[xX]-\^=/
 syntax match    mewlixLambda        /=\^[oO][xX][oO]^=/
-syntax match    mewlixLambda        /=>/
+syntax match    mewlixLambda        /->/
+syntax match    mewlixDoArrow       /<-/
 
 " Newline escape:
 " -------------------------------------------------
@@ -149,6 +150,7 @@ hi def link mewlixTryCatch      Statement
 hi def link mewlixFuncDef       Statement
 hi def link mewlixBox           Statement
 hi def link mewlixLambda        Statement
+hi def link mewlixDoArrow       Statement
 
 " Standard library:
 hi def link mewlixStd           Identifier
