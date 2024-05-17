@@ -45,8 +45,8 @@ syntax region   mewlixString        start=/"/ skip=/\\"/ end=/"/ contains=mewlix
 syntax region   mewlixString        start=/'/ skip=/\\'/ end=/'/ contains=mewlixEscapeChar
 syntax region   mewlixStringLn      start=/"""/ skip=/\\"/ end=/"""/ contains=mewlixEscapeChar
 syntax region   mewlixStringLn      start=/'''/ skip=/\\'/ end=/'''/ contains=mewlixEscapeChar
-syntax region   mewlixYarnString    start=/:3"/ skip=/\\"/ end=/"/ contains=mewlixEscapeChar
-syntax region   mewlixYarnString    start=/:3'/ skip=/\\'/ end=/'/ contains=mewlixEscapeChar
+syntax region   mewlixYarnString    start=/:3"/ skip=/\%(\\"\|\[.*\]\)/ end=/"/ contains=mewlixEscapeChar
+syntax region   mewlixYarnString    start=/:3'/ skip=/\%(\\'\|\[.*\]\)/ end=/'/ contains=mewlixEscapeChar
 
 " Operators:
 " -------------------------------------------------
