@@ -73,6 +73,7 @@ syntax keyword  mewlixStatement     meow do listen catnap bring assert throw ret
 syntax keyword  mewlixHome          home
 syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
+syntax keyword  mewlixTryCatch      watch
 
 call s:highlightWords('mewlixStatement', ["run", "away"])
 call s:highlightWords('mewlixEnum', ["cat", "tree"])
@@ -84,7 +85,6 @@ call s:highlightWords('mewlixRepeat', ["stare", "while"])
 call s:highlightWords('mewlixRepeat', ["chase", "after"])
 call s:highlightWords('mewlixRepeat', ["catch", "a"])
 call s:highlightWords('mewlixYarnball', ["yarn", "ball"])
-call s:highlightWords('mewlixTryCatch', ["watch", "attentively"])
 call s:highlightWords('mewlixTryCatch', ["pounce", "on"])
 
 " Symbols:
