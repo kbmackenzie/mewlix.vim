@@ -1,7 +1,7 @@
 function! s:emojify()
-    silent s/=\^\.x\.\^=/😺/ge
-    silent s/=\^oxo\^=/🐈/ge
-    silent s/=\^-x-\^=/📦/ge
+    silent %substitute/=\^\.x\.\^=/😺/ge
+    silent %substitute/=\^oxo\^=/🐈/ge
+    silent %substitute/=\^-x-\^=/📦/ge
 endfun
 
 command! MewlixEmojify call s:emojify()
