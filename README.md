@@ -1,21 +1,21 @@
 A [mewlix](https://github.com/kbmackenzie/mewlix) syntax highlighting script for Vim.
 
 ## Installation
-After copying the `mewlix.vim` script to the [Vim syntax folder](https://vimdoc.sourceforge.net/htmldoc/syntax.html#mysyntaxfile), add one of of the following snippets to your configuration:
 
-### Vim Script
-Paste this Vim Script snippet in your `.vimrc`:
-```vim
-" Mewlix syntax highlighting for all *.mews files:
-autocmd BufNewFile,BufRead *.mews set filetype=mewlix
-```
+You can install the plugin with your preferred package manager. A few examples:
 
-### Neovim Lua
-In Neovim, you can use the following Lua snippet:
+### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
 ```lua
--- Mewlix syntax highlighting for all *.mews files:
-vim.api.nvim_create_autocmd({ 'BufNewFile', 'BufRead' }, {
-  pattern = '*.mews',
-  command = 'set filetype=mewlix',
-})
+{
+  'kbmackenzie/mewlix.vim',
+  lazy = false
+}
 ```
+
+### Using [vim-plug](https://github.com/junegunn/vim-plug)
+
+1. Add the plugin in your `~/.vimrc`:
+```vim
+Plug 'kbmackenzie/mewlix.vim'
+```
+2. Run `:PlugInstall`
