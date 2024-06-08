@@ -6,14 +6,12 @@ if exists("b:current_syntax")
     finish
 endif
 
-echo 'yay'
-
 " Helper functions:
 " -------------------------------------------------
 function! s:wordSequence(words)
     let l:output = '/\<' .. a:words[0] .. '\>'
     for word in a:words[1:]
-        let l:output = l:output .. '\s*' .. '\<' .. word .. '\>'
+        let l:output = l:output .. '\s*\<' .. word .. '\>'
     endfor
     return l:output .. '/'
 endfunction
@@ -28,9 +26,9 @@ syntax case match
 " Identifiers:
 " -------------------------------------------------
 syntax match    mewlixType          /\<[A-Z][a-zA-Z0-9_]*\>/
-syntax match    mewlixFunction      /\<[a-z_][a-zA-Z0-9_]*\ze\s*(/
+syntax match    mewlixFunction      /\<[a-z_][a-zA-Z0-9_]*\>\ze\s*(/
 syntax match    mewlixBoxProperty   /\<[a-z_][a-zA-Z0-9_]*\>:/
-syntax match    mewlixDoAction      /\<[a-z_][a-zA-Z0-9_]*\ze\s*<-/
+syntax match    mewlixDoAction      /\<[a-z_][a-zA-Z0-9_]*\>\ze\s*<-/
 
 " Literals:
 " -------------------------------------------------
