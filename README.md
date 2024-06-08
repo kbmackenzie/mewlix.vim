@@ -4,7 +4,7 @@ A [Mewlix](https://github.com/kbmackenzie/mewlix) syntax highlighting plugin for
 
 This plugin adds Mewlix syntax highlighting for all `.mews` files. No configuration is needed.
 
-Additionally, it adds the `:MewlixEmojify` command, which performs simple string substitution to replace ASCII symbols with emojis:
+Additionally, it adds the `:MewlixEmojify` command, which replaces ASCII symbols with emojis:
 
 | Symbol    | Emoji |
 |-----------|-------|
@@ -12,7 +12,7 @@ Additionally, it adds the `:MewlixEmojify` command, which performs simple string
 | `=^oxo^=` | 🐈    |
 | `=^-x-^=` | 📦    |
 
-**Note:** That command uses `:substitute` and doesn't differentiate between strings/comments and code. It will replace those symbols *anywhere* in the current buffer. However, those symbols are so long and specific that's *usually* not an issue!
+**Note:** That command uses `:substitute` and doesn't differentiate between strings/comments and code. It'll replace those symbols *anywhere* in the current buffer. However, the symbols are so specific this is rarely an issue.
 
 ## Installation
 
