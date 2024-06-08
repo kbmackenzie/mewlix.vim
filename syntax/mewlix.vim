@@ -6,14 +6,16 @@ if exists("b:current_syntax")
     finish
 endif
 
+echo 'yay'
+
 " Helper functions:
 " -------------------------------------------------
 function! s:wordSequence(words)
-    let l:output = '/\%(^\|[^a-zA-Z0-9_]\)\zs' .. a:words[0]
+    let l:output = '/\<' .. a:words[0] .. '\>'
     for word in a:words[1:]
-        let l:output = l:output .. '\s*' .. word
+        let l:output = l:output .. '\s*' .. '\<' .. word .. '\>'
     endfor
-    return l:output .. '\ze\%([^a-zA-Z0-9_]\|$\)/'
+    return l:output .. '/'
 endfunction
 
 function! s:highlightWords(group, words)
@@ -25,16 +27,16 @@ syntax case match
 
 " Identifiers:
 " -------------------------------------------------
-syntax match    mewlixType          /[A-Z][a-zA-Z0-9_]*/
-syntax match    mewlixFunction      /[a-z_][a-zA-Z0-9_]*\ze\s*(/
-syntax match    mewlixBoxProperty   /[a-z_][a-zA-Z0-9_]*:/
-syntax match    mewlixDoAction      /[a-z_][a-zA-Z0-9_]*\ze\s*<-/
+syntax match    mewlixType          /\<[A-Z][a-zA-Z0-9_]*\>/
+syntax match    mewlixFunction      /\<[a-z_][a-zA-Z0-9_]*\ze\s*(/
+syntax match    mewlixBoxProperty   /\<[a-z_][a-zA-Z0-9_]*\>:/
+syntax match    mewlixDoAction      /\<[a-z_][a-zA-Z0-9_]*\ze\s*<-/
 
 " Literals:
 " -------------------------------------------------
-syntax match    mewlixInt           /\d\+/
-syntax match    mewlixFloat         /\d\+\.\d\+/
-syntax match    mewlixFloat         /\d\+\%(\.\d\+\)\?e\d\+/
+syntax match    mewlixInt           /\<\d\+\>/
+syntax match    mewlixFloat         /\<\d\+\.\d\+\>/
+syntax match    mewlixFloat         /\<\d\+\%(\.\d\+\)\?e\d\+\>/
 syntax keyword  mewlixBoolean       true false
 syntax keyword  mewlixNil           nothing
 
