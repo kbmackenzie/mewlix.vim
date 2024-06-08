@@ -1,4 +1,4 @@
-A [mewlix](https://github.com/kbmackenzie/mewlix) syntax highlighting script for Vim.
+A [Mewlix](https://github.com/kbmackenzie/mewlix) syntax highlighting plugin for Vim / Neovim.
 
 ## Installation
 
