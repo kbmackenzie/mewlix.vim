@@ -26,9 +26,9 @@ syntax case match
 " Identifiers:
 " -------------------------------------------------
 syntax match    mewlixType          /\<_*[A-Z][a-zA-Z0-9_]*\>/
-syntax match    mewlixFunction      /\<[a-z_][a-zA-Z0-9_]*\>\ze\s*(/
-syntax match    mewlixBoxProperty   /\<[a-z_][a-zA-Z0-9_]*\>:/
-syntax match    mewlixDoAction      /\<[a-z_][a-zA-Z0-9_]*\>\ze\s*<-/
+syntax match    mewlixFunction      /\<_*[a-z][a-zA-Z0-9_]*\>\ze\s*(/
+syntax match    mewlixBoxProperty   /\<_*[a-z][a-zA-Z0-9_]*\>:/
+syntax match    mewlixDoAction      /\<_*[a-z][a-zA-Z0-9_]*\>\ze\s*<-/
 
 " Literals:
 " -------------------------------------------------
