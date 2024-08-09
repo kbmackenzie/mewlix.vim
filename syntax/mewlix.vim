@@ -77,6 +77,7 @@ syntax keyword  mewlixTryCatch      watch
 
 call s:highlightWords('mewlixStatement'   , ["run", "away"]     )
 call s:highlightWords('mewlixEnum'        , ["cat", "tree"]     )
+call s:highlightWords('mewlixOutside'     , ["outside"]         )
 call s:highlightWords('mewlixOutside'     , ["look", "outside"] )
 call s:highlightWords('mewlixConditional' , ["look", "if"]      )
 call s:highlightWords('mewlixConditional' , ["or", "if"]        )
