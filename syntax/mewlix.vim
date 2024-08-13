@@ -2,7 +2,7 @@
 " Language: Mewlix 
 " Maintainer: kbmackenzie <kelly.a.betty@gmail.com>
 
-if exists("b:current_syntax")
+if exists('b:current_syntax')
     finish
 endif
 
@@ -57,12 +57,12 @@ syntax match    mewlixOperator      /|>/
 syntax match    mewlixOperator      /\.\.\%(\.?\)\?/
 syntax match    mewlixOperator      /\*/
 
-call s:highlightWords('mewlixOperator' , ["knock", "over"]  )
-call s:highlightWords('mewlixOperator' , ["paw", "at"]      )
-call s:highlightWords('mewlixOperator' , ["claw", "at"]     )
-call s:highlightWords('mewlixOperator' , ["or"]             )
-call s:highlightWords('mewlixOperator' , ["else"]           )
-call s:highlightWords('mewlixOperator' , ["type", "of"]     )
+call s:highlightWords('mewlixOperator' , ['knock', 'over']  )
+call s:highlightWords('mewlixOperator' , ['paw', 'at']      )
+call s:highlightWords('mewlixOperator' , ['claw', 'at']     )
+call s:highlightWords('mewlixOperator' , ['or']             )
+call s:highlightWords('mewlixOperator' , ['else']           )
+call s:highlightWords('mewlixOperator' , ['type', 'of']     )
 
 " Statements:
 " -------------------------------------------------
@@ -74,18 +74,18 @@ syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
 syntax keyword  mewlixTryCatch      watch
 
-call s:highlightWords('mewlixStatement'   , ["run", "away"]     )
-call s:highlightWords('mewlixEnum'        , ["cat", "tree"]     )
-call s:highlightWords('mewlixOutside'     , ["outside"]         )
-call s:highlightWords('mewlixOutside'     , ["look", "outside"] )
-call s:highlightWords('mewlixConditional' , ["look", "if"]      )
-call s:highlightWords('mewlixConditional' , ["or", "if"]        )
-call s:highlightWords('mewlixConditional' , ["else", "just"]    )
-call s:highlightWords('mewlixRepeat'      , ["stare", "while"]  )
-call s:highlightWords('mewlixRepeat'      , ["chase", "after"]  )
-call s:highlightWords('mewlixRepeat'      , ["catch", "a"]      )
-call s:highlightWords('mewlixYarnball'    , ["yarn", "ball"]    )
-call s:highlightWords('mewlixTryCatch'    , ["pounce", "on"]    )
+call s:highlightWords('mewlixStatement'   , ['run', 'away']     )
+call s:highlightWords('mewlixEnum'        , ['cat', 'tree']     )
+call s:highlightWords('mewlixOutside'     , ['outside']         )
+call s:highlightWords('mewlixOutside'     , ['look', 'outside'] )
+call s:highlightWords('mewlixConditional' , ['look', 'if']      )
+call s:highlightWords('mewlixConditional' , ['or', 'if']        )
+call s:highlightWords('mewlixConditional' , ['else', 'just']    )
+call s:highlightWords('mewlixRepeat'      , ['stare', 'while']  )
+call s:highlightWords('mewlixRepeat'      , ['chase', 'after']  )
+call s:highlightWords('mewlixRepeat'      , ['catch', 'a']      )
+call s:highlightWords('mewlixYarnball'    , ['yarn', 'ball']    )
+call s:highlightWords('mewlixTryCatch'    , ['pounce', 'on']    )
 
 " Symbols:
 " -------------------------------------------------
@@ -113,7 +113,7 @@ syntax region   mewlixBlockComment  start=/\~( \^\.[xX]\.\^)>/ end=/<(\^\.[xX]\.
 " --------------------------------
 " Adding highlighting:
 " --------------------------------
-let b:current_syntax = "mewlix"
+let b:current_syntax = 'mewlix'
 
 " Identifiers:
 hi def link mewlixType          Type
