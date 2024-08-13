@@ -54,8 +54,7 @@ syntax keyword  mewlixOperator      and not push is new nand nor if in
 syntax match    mewlixOperator      /[+\-/\^=<>%]/
 syntax match    mewlixOperator      /:>/
 syntax match    mewlixOperator      /|>/
-syntax match    mewlixOperator      /\.\./
-syntax match    mewlixOperator      /\.\.\.?/
+syntax match    mewlixOperator      /\.\.\%(\.?\)\?/
 syntax match    mewlixOperator      /\*/
 
 call s:highlightWords('mewlixOperator' , ["knock", "over"]  )
