@@ -16,7 +16,7 @@ Additionally, it adds the `:MewlixEmojify` command, which replaces ASCII symbols
 
 ## Installation
 
-You can install the plugin with your preferred package manager. A few examples:
+You can install the plugin with your preferred plugin manager. A few examples:
 
 ### Using [lazy.nvim](https://github.com/folke/lazy.nvim)
 ```lua
