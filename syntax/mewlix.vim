@@ -3,22 +3,22 @@
 " Maintainer: kbmackenzie <kelly.a.betty@gmail.com>
 
 if exists('b:current_syntax')
-    finish
+  finish
 endif
 
 " Helper functions:
 " -------------------------------------------------
 function! s:wordSequence(words)
-    let l:output = '/\<' .. a:words[0] .. '\>'
-    for word in a:words[1:]
-        let l:output = l:output .. '\s*\<' .. word .. '\>'
-    endfor
-    return l:output .. '/'
+  let l:output = '/\<' .. a:words[0] .. '\>'
+  for word in a:words[1:]
+    let l:output = l:output .. '\s*\<' .. word .. '\>'
+  endfor
+  return l:output .. '/'
 endfunction
 
 function! s:highlightWords(group, words)
-    let l:syntaxCmd = 'syntax match ' .. a:group .. ' ' .. s:wordSequence(a:words)
-    execute l:syntaxCmd
+  let l:syntaxCmd = 'syntax match ' .. a:group .. ' ' .. s:wordSequence(a:words)
+  execute l:syntaxCmd
 endfunction
 
 syntax case match
