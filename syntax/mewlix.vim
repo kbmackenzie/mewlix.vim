@@ -68,7 +68,7 @@ call s:highlightWords('mewlixOperator' , ['type', 'of']     )
 " -------------------------------------------------
 syntax keyword  mewlixDeclare       mew
 syntax keyword  mewlixClowder       clowder wake 
-syntax keyword  mewlixStatement     meow do listen catnap bring assert explode rethrow escape
+syntax keyword  mewlixStatement     meow do catnap bring assert explode rethrow escape
 syntax keyword  mewlixHome          home
 syntax keyword  mewlixImport        takes as from
 syntax keyword  mewlixYarnball      yarnball
