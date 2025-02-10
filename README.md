@@ -1,4 +1,4 @@
-A [Mewlix](https://github.com/kbmackenzie/mewlix) syntax highlighting plugin for Vim / Neovim.
+A [Mewlix](https://kbmackenzie.xyz/projects/mewlix) syntax highlighting plugin for Vim / Neovim.
 
 ## Usage
 
