@@ -81,7 +81,7 @@ syntax cluster mewlixExpression contains=mewlixType,mewlixFunction,mewlixBoxProp
                                   \mewlixOperator,mewlixFuncDef,mewlixBox,mewlixLambda,
                                   \mewlixDoArrow,mewlixStd
 
-syntax region mewlixEmbeddedExpr start=/\[/ end=/\]/ contains=@mewlixExpression
+syntax region mewlixEmbeddedExpr contained start=/\[/ end=/\]/ contains=@mewlixExpression
 
 " Statements:
 " -------------------------------------------------
